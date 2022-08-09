@@ -22,7 +22,7 @@ public extension Package {
     )
     static let FSCalendar = Package.remote(
         url: "https://github.com/Alamofire/Alamofire",
-        requirement: .upToNextMajor(from: "5.6.2")
+        requirement: .upToNextMajor(from: "2.8.3")
     )
     static let Tabman = Package.remote(
         url: "https://github.com/uias/Tabman",
