@@ -21,7 +21,7 @@ public extension Package {
     )
     static let FSCalendar = Package.remote(
         url: "https://github.com/Alamofire/Alamofire",
-        requirement: .upToNextMajor(from: "5.6.1")
+        requirement: .upToNextMajor(from: "5.6.2")
     )
 }
 
