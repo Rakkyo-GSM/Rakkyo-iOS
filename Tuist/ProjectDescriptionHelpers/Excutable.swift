@@ -20,10 +20,10 @@ extension Project{
                     product: product,
                     bundleId: "\(publicOrganizationName).\(name)",
                     deploymentTarget: deploymentTarget,
-                    infoPlist: .file(path: Path("Project/Support/Info.plist")),
-                    sources: ["Project/Source/**"],
-                    resources: ["Project/Resource/**"],
-                    entitlements: Path("Project/Support/\(name).entitlements"),
+                    infoPlist: .file(path: Path("Projects/App/Support/Info.plist")),
+                    sources: ["Projects/App/Sources/**"],
+                    resources: ["Projects/App/Resources/**"],
+                    entitlements: Path("Projects/App/Support/\(name).entitlements"),
                     dependencies: dependencies
                 )
             ]
