@@ -10,13 +10,15 @@ let project = Project.excutable(
     packages: [
         .Then,
         .SnapKit,
-        .FSCalendar
+        .FSCalendar,
+        .Tabman
     ],
     product: .app,
     deploymentTarget: .iOS(targetVersion: "13.5", devices: [.iphone, .ipad]),
     dependencies: [
         .SPM.Then,
         .SPM.SnapKit,
-        .SPM.FSCalendar
+        .SPM.FSCalendar,
+        .SPM.Tabman
     ]
 )
