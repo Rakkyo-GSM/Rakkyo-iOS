@@ -17,7 +17,10 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum RakkyoIOSAsset {
-  public static let accentColor = RakkyoIOSColors(name: "AccentColor")
+    public enum Colors{
+        public static let rakkyoMainColor = RakkyoIOSColors(name: "Rakkyo_MainColor")
+        public static let rakkyoShadowColor = RakkyoIOSColors(name: "Rakkyo_ShadowColor")
+    }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
