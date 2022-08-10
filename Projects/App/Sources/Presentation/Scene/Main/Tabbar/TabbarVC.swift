@@ -16,7 +16,7 @@ final class TabBarVC: TabmanViewController{
             $0.layout.transitionStyle = .snap
             $0.buttons.customize { (button) in
                 button.selectedTintColor = RakkyoIOSAsset.Colors.rakkyoMainColor.color
-                button.tintColor = RakkyoIOSAsset.Colors.rakkyoShadowColor.color
+                button.tintColor = RakkyoIOSAsset.Colors.rakkyoTabbaShadowColor.color
             }
         }
         addBar(bar, dataSource: self, at: .bottom)

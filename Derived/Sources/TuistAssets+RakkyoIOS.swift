@@ -20,6 +20,7 @@ public enum RakkyoIOSAsset {
   public enum Colors {
     public static let rakkyoMainColor = RakkyoIOSColors(name: "Rakkyo_MainColor")
     public static let rakkyoShadowColor = RakkyoIOSColors(name: "Rakkyo_ShadowColor")
+    public static let rakkyoTabbaShadowColor = RakkyoIOSColors(name: "Rakkyo_TabbaShadowColor")
   }
   public enum Images {
     public static let accentColor = RakkyoIOSColors(name: "AccentColor")
