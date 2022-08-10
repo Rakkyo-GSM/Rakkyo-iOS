@@ -11,7 +11,8 @@ let project = Project.excutable(
         .Then,
         .SnapKit,
         .FSCalendar,
-        .Tabman
+        .Tabman,
+        .Alamofire
     ],
     product: .app,
     deploymentTarget: .iOS(targetVersion: "13.5", devices: [.iphone, .ipad]),
@@ -19,6 +20,7 @@ let project = Project.excutable(
         .SPM.Then,
         .SPM.SnapKit,
         .SPM.FSCalendar,
-        .SPM.Tabman
+        .SPM.Tabman,
+        .SPM.Alamofire
     ]
 )

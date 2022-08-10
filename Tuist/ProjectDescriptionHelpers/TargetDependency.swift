@@ -9,6 +9,7 @@ public extension TargetDependency.SPM{
     static let Then = TargetDependency.package(product: "Then")
     static let FSCalendar = TargetDependency.package(product: "FSCalendar")
     static let Tabman = TargetDependency.package(product: "Tabman")
+    static let Alamofire = TargetDependency.package(product: "Alamofire")
 }
 
 public extension Package {
@@ -21,12 +22,15 @@ public extension Package {
         requirement: .upToNextMajor(from: "3.0.0")
     )
     static let FSCalendar = Package.remote(
-        url: "https://github.com/Alamofire/Alamofire",
+        url: "https://github.com/WenchaoD/FSCalendar",
         requirement: .upToNextMajor(from: "2.8.3")
     )
     static let Tabman = Package.remote(
         url: "https://github.com/uias/Tabman",
         requirement: .upToNextMajor(from: "2.12.0")
     )
+    static let Alamofire = Package.remote(
+        url: "https://github.com/Alamofire/Alamofire",
+        requirement: .upToNextMajor(from: "5.6.2"))
 }
 
