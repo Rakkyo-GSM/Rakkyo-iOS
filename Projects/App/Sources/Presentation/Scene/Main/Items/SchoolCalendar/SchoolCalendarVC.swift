@@ -60,4 +60,9 @@ extension SchoolCalendarVC: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoCell
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailVC()
+        self.present(detailVC, animated: true, completion: nil)
+        print("asd")
+    }
 }
