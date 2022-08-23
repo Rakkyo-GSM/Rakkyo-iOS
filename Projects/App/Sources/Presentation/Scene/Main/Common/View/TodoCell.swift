@@ -15,6 +15,7 @@ final class TodoCell: baseTableViewCell{
     
     override func addView() {
         self.addSubViews(mainButton,buttonShadowView)
+        self.bringSubviewToFront(mainButton)
     }
     
     override func setLayout() {
@@ -26,6 +27,8 @@ final class TodoCell: baseTableViewCell{
         }
         buttonShadowView.snp.makeConstraints { make in
             make.centerX.equalTo(mainButton)
+            make.width.equalTo(300)
+            make.height.equalTo(34)
             make.bottom.equalTo(mainButton).offset(13)
         }
     }

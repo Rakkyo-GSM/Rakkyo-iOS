@@ -20,7 +20,7 @@ final class RakkyoCalendar: FSCalendar{
         self.scrollDirection = .horizontal
         self.layer.cornerRadius = 16
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.4
+        self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 16
         self.layer.shadowPath = nil
         self.calendarWeekdayView.weekdayLabels[0].text = "S"
