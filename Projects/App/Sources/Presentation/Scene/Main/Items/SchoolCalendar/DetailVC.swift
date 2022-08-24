@@ -25,6 +25,7 @@ final class DetailVC: baseVC{
     
     private let addButton = UIButton().then{
         $0.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        $0.addTarget(self, action: #selector(addTodo), for: .touchUpInside)
     }
     
     private let noWorkLabel = UILabel().then{
@@ -37,6 +38,7 @@ final class DetailVC: baseVC{
         $0.setTitle("할 일 추가하기", for: .normal)
         $0.setTitleColor(UIColor.systemBlue, for: .normal)
         $0.backgroundColor = .clear
+        $0.addTarget(self, action: #selector(addTodo), for: .touchUpInside)
     }
     
     override func addView() {
@@ -78,5 +80,19 @@ final class DetailVC: baseVC{
             make.centerX.equalTo(noWorkLabel)
             make.top.equalTo(noWorkLabel.snp.bottom).offset(8)
         }
+    }
+    @objc func addTodo(_ sender: Any){
+        let alert = UIAlertController(title: "할 일 추가", message: "할 일을 입력해주세요", preferredStyle: .alert)
+        alert.addTextField()
+        
+        let okAction = UIAlertAction(title: "확인", style: .default) {(action) in
+            
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(cancel)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
