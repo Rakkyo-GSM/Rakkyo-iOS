@@ -25,8 +25,7 @@ final class SchoolMealVC: baseVC{
     }
     
     private let menuTypeSegmentControl = MenuTypeSegmentedControl().then {
-        $0.backgroundColor = .lightGray
-        
+        $0.tintColor = .red
     }
     
     override func addView() {
@@ -53,9 +52,10 @@ final class SchoolMealVC: baseVC{
         }
         
         menuTypeSegmentControl.snp.makeConstraints {
-            $0.top.equalTo(menuListBoxView.snp.bottom).offset(25)
+            $0.top.equalTo(menuListBoxView.snp.bottom).offset(36)
             $0.leading.equalToSuperview().offset(40)
-            $0.height.equalTo(150)
+            $0.height.equalTo(50)
+            $0.centerX.equalToSuperview()
         }
     }
     
