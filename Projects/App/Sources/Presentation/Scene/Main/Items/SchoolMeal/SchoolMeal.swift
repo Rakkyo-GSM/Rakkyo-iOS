@@ -15,7 +15,7 @@ final class SchoolMealVC: baseVC{
         $0.backgroundColor = RakkyoIOSAsset.Colors.rakkyoMainColor.color
     }
     
-    private let menuListBoxView = UIView().then {
+    private let menuListView = UIView().then {
         $0.backgroundColor = .white
         $0.layer.cornerRadius = 30
         $0.layer.shadowRadius = 15
@@ -29,7 +29,7 @@ final class SchoolMealVC: baseVC{
     }
     
     override func addView() {
-        view.addSubViews(menuLabel, dateButton, menuListBoxView,menuTypeSegmentControl)
+        view.addSubViews(menuLabel, dateButton, menuListView, menuTypeSegmentControl)
     }
     
     override func setLayout() {
@@ -44,7 +44,7 @@ final class SchoolMealVC: baseVC{
             $0.leading.equalToSuperview().offset(117)
         }
         
-        menuListBoxView.snp.makeConstraints {
+        menuListView.snp.makeConstraints {
             $0.top.equalTo(dateButton.snp.bottom).offset(49)
             $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(40)
@@ -52,7 +52,7 @@ final class SchoolMealVC: baseVC{
         }
         
         menuTypeSegmentControl.snp.makeConstraints {
-            $0.top.equalTo(menuListBoxView.snp.bottom).offset(36)
+            $0.top.equalTo(menuListView.snp.bottom).offset(36)
             $0.leading.equalToSuperview().offset(40)
             $0.height.equalTo(50)
             $0.centerX.equalToSuperview()
