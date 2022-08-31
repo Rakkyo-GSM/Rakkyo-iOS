@@ -25,7 +25,7 @@ final class SchoolMealVC: baseVC{
     }
     
     private let menuTypeSegmentControl = MenuTypeSegmentedControl().then {
-        $0.tintColor = .red
+        $0.layer.cornerRadius = 10
     }
     
     override func addView() {
