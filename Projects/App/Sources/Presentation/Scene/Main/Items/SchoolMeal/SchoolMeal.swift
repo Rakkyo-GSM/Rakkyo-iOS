@@ -24,12 +24,16 @@ final class SchoolMealVC: baseVC{
         $0.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
     }
     
+    private let menuListLabel = UILabel().then {
+        $0.text = "김치 \n 밥 \n"
+    }
+    
     private let menuTypeSegmentControl = MenuTypeSegmentedControl().then {
         $0.layer.cornerRadius = 10
     }
     
     override func addView() {
-        view.addSubViews(menuLabel, dateButton, menuListView, menuTypeSegmentControl)
+        view.addSubViews(menuLabel, dateButton, menuLabel, menuListView, menuTypeSegmentControl)
     }
     
     override func setLayout() {
@@ -42,6 +46,10 @@ final class SchoolMealVC: baseVC{
             $0.top.equalTo(menuLabel.snp.bottom).offset(8)
             $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(117)
+        }
+        
+        menuListLabel.snp.makeConstraints {
+            $0.top.equalTo(menuLabel.snp.bottom)
         }
         
         menuListView.snp.makeConstraints {

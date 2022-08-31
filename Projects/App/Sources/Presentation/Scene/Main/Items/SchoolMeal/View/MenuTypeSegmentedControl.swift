@@ -2,8 +2,8 @@ import UIKit
 
 final class MenuTypeSegmentedControl: UIView {
     
-    let menuType: [String] = ["아침", "점심", "저녁"]
-    let image = UIImage()
+    private let menuType: [String] = ["아침", "점심", "저녁"]
+    private let image = UIImage()
     
     private lazy var menuTypeSegmentedControl = UISegmentedControl(items: menuType).then {
         $0.setBackgroundImage(image, for: .normal, barMetrics: .default)
