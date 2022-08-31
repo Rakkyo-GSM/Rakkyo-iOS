@@ -31,7 +31,6 @@ private extension MenuTypeSegmentedControl {
     func addView() {
         addSubViews(menuTypeView)
         menuTypeView.addSubview(menuTypeSegmentedControl)
-       
     }
     
     func setLayout() {
