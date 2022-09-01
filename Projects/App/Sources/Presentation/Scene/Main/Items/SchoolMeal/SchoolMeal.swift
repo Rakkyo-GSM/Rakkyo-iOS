@@ -24,12 +24,15 @@ final class SchoolMealVC: baseVC{
         $0.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
     }
     
-    private let menuTypeSegmentControl = MenuTypeSegmentedControl().then {
-        $0.layer.cornerRadius = 10
+    private let menuType: [String] = ["아침", "점심", "저녁"]
+        
+    private lazy var menuTypeSegmentedControl = UISegmentedControl(items: menuType).then {
+            $0.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1), .font: UIFont.systemFont(ofSize: 13, weight: .semibold)], for: .normal)
+            $0.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(red: 0.425, green: 0.62, blue: 1, alpha: 1), .font: UIFont.systemFont(ofSize: 16, weight: .semibold)], for: .selected)
     }
     
     override func addView() {
-        view.addSubViews(menuLabel, dateButton, menuListView, menuTypeSegmentControl)
+        view.addSubViews(menuLabel, dateButton, menuListView, menuTypeSegmentedControl)
     }
     
     override func setLayout() {
@@ -51,15 +54,11 @@ final class SchoolMealVC: baseVC{
             $0.height.equalTo(362)
         }
         
-        menuTypeSegmentControl.snp.makeConstraints {
+        menuTypeSegmentedControl.snp.makeConstraints {
             $0.top.equalTo(menuListView.snp.bottom).offset(36)
             $0.leading.equalToSuperview().offset(40)
             $0.height.equalTo(40)
             $0.centerX.equalToSuperview()
         }
     }
-    
-    
-    
-    
 }
