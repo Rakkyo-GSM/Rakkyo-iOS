@@ -8,7 +8,7 @@ final class TodoCell: baseTableViewCell{
     private let mainButton = UIButton().then{
         $0.backgroundColor = RakkyoIOSAsset.Colors.rakkyoMainColor.color
         $0.layer.cornerRadius = 16
-        $0.setTitle("헤으응", for: .normal)
+        $0.setTitle("2차 지필평가", for: .normal)
     }
     
     private let buttonShadowView = ShadowView()
