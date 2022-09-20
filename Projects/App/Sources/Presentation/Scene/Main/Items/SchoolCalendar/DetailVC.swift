@@ -86,9 +86,11 @@ final class DetailVC: baseVC{
         alert.addTextField()
         
         let okAction = UIAlertAction(title: "확인", style: .default) {(action) in
+             
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel) { (action) in
             
         }
-        let cancel = UIAlertAction(title: "취소", style: .cancel)
         
         alert.addAction(cancel)
         alert.addAction(okAction)

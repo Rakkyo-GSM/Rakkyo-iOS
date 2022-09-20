@@ -46,7 +46,7 @@ final class SchoolCalendarVC: baseVC,FSCalendarDelegate,FSCalendarDataSource{
         todoTableView.snp.makeConstraints { make in
             make.top.equalTo(shadowView).offset(70)
             make.width.equalToSuperview()
-            make.height.equalTo(150)
+            make.height.equalTo(130)
         }
     }
 }
