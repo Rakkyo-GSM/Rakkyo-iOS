@@ -47,13 +47,13 @@ extension TabBarVC: PageboyViewControllerDataSource, TMBarDataSource {
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         
         let calendarImage = TMBarItem(title: "")
-        calendarImage.image = Image.calendarImage
+        calendarImage.image = UIImage(systemName: "calendar")
         
         let schoolMealImage = TMBarItem(title: "")
-        schoolMealImage.image = Image.schoolMealImage
+        schoolMealImage.image = UIImage(systemName: "fork")
         
-        let scheduleImage = TMBarItem(title: "")
-        scheduleImage.image = Image.scheulerImage
+        let scheduleImage = TMBarItem(title: "list.bullet.rectangle.portrait")
+        scheduleImage.image =
         
         
         // MARK: - return tabBar
