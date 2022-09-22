@@ -52,8 +52,8 @@ extension TabBarVC: PageboyViewControllerDataSource, TMBarDataSource {
         let schoolMealImage = TMBarItem(title: "")
         schoolMealImage.image = UIImage(systemName: "fork")
         
-        let scheduleImage = TMBarItem(title: "list.bullet.rectangle.portrait")
-        scheduleImage.image =
+        let scheduleImage = TMBarItem(title: "")
+        scheduleImage.image = UIImage(systemName: "list.bullet.rectangle.portrait")
         
         
         // MARK: - return tabBar
