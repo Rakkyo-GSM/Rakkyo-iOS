@@ -3,7 +3,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class TodoCell: baseTableViewCell{
+final class TodoCell: BaseTableViewCell{
     
     private let mainButton = UIButton().then{
         $0.backgroundColor = RakkyoIOSAsset.Colors.rakkyoMainColor.color

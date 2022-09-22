@@ -5,7 +5,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class DetailVC: baseVC{
+final class DetailVC: BaseVC{
     
     private let mainView = ShadowView()
     

@@ -1,9 +1,8 @@
-
 import UIKit
 
-class baseCollectionViewCell: UICollectionViewCell{
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+class BaseTableViewCell : UITableViewCell{
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUp()
         addView()
         setLayout()
@@ -22,5 +21,7 @@ class baseCollectionViewCell: UICollectionViewCell{
     func setUp(){}
     func addView(){}
     func setLayout(){}
-    func configureCell(){}
+    func configureCell(){
+        selectionStyle = .none
+    }
 }

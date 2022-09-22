@@ -4,7 +4,7 @@ import FSCalendar
 import Then
 import SnapKit
 
-final class SchoolCalendarVC: baseVC,FSCalendarDelegate,FSCalendarDataSource{
+final class SchoolCalendarVC: BaseVC,FSCalendarDelegate,FSCalendarDataSource{
     
     private let calendar = RakkyoCalendar()
     

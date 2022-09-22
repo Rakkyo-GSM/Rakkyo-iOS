@@ -1,6 +1,6 @@
 import UIKit
 
-class baseVC: UIViewController{
+class BaseVC: UIViewController{
     let bound = UIScreen.main.bounds
     
     init(){

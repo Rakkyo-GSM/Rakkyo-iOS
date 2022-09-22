@@ -1,6 +1,6 @@
 
 import UIKit
 
-final class SchoolMealVC: baseVC{
+final class SchoolMealVC: BaseVC{
     
 }
