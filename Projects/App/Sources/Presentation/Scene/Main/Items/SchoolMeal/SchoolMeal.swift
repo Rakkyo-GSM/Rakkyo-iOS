@@ -3,24 +3,11 @@ import UIKit
 
 final class SchoolMealVC: baseVC{
     
-    private var availableYear: [Int] = []
-    private let allMonth: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    private var selectedYear = 0
-    private var selectedMonth = 0
-    private var todayYear = "0"
-    private var todayMonth = "0"
     private let menuType: [String] = ["아침", "점심", "저녁"]
     
     private let menuLabel = UILabel().then {
         $0.text = "아침 급식"
         $0.font = .systemFont(ofSize: 26)
-    }
-    
-    private let dateButton = UIButton().then {
-        $0.setTitle("2000년", for: .normal)
-        $0.layer.cornerRadius = 8
-        $0.backgroundColor = RakkyoIOSAsset.Colors.rakkyoMainColor.color
-        $0.tintColor = .clear
     }
     
     private let menuListView = UIView().then {
@@ -43,18 +30,19 @@ final class SchoolMealVC: baseVC{
     }
     
     override func addView() {
-        view.addSubViews(menuLabel, dateButton, menuListView, menuTypeSegmentedControl, datePickerView)
+        view.addSubViews(menuLabel, menuListView, menuTypeSegmentedControl, datePickerView)
     }
     
     override func setLayout() {
         menuLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(55)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(85)
+            $0.leading.equalTo(menuListView.snp.leading).offset(15)
         }
         
         datePickerView.snp.makeConstraints {
-            $0.top.equalTo(menuLabel.snp.bottom).offset(8)
+            $0.top.equalTo(menuLabel.snp.top)
             $0.centerX.equalToSuperview()
+            $0.trailing.equalTo(menuListView.snp.trailing)
         }
         
         menuListView.snp.makeConstraints {
@@ -65,14 +53,11 @@ final class SchoolMealVC: baseVC{
         }
         
         menuTypeSegmentedControl.snp.makeConstraints {
-            $0.top.equalTo(menuListView.snp.bottom).offset(36)
+            $0.top.equalTo(menuListView.snp.bottom).offset(40)
             $0.leading.equalToSuperview().offset(40)
             $0.height.equalTo(40)
             $0.centerX.equalToSuperview()
         }
-    }
-   
-    override func configureVC() {
     }
 }
 
