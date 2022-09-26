@@ -34,29 +34,29 @@ final class SchoolMealVC: baseVC{
     }
     
     override func setLayout() {
-        menuLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(85)
-            $0.leading.equalTo(menuListView.snp.leading).offset(15)
+        menuLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(85)
+            make.leading.equalTo(menuListView.snp.leading).offset(15)
         }
         
-        datePickerView.snp.makeConstraints {
-            $0.top.equalTo(menuLabel.snp.top)
-            $0.centerX.equalToSuperview()
-            $0.trailing.equalTo(menuListView.snp.trailing)
+        datePickerView.snp.makeConstraints { make in
+            make.top.equalTo(menuLabel.snp.top)
+            make.centerX.equalToSuperview()
+            make.trailing.equalTo(menuListView.snp.trailing)
         }
         
-        menuListView.snp.makeConstraints {
-            $0.top.equalTo(datePickerView.snp.bottom).offset(49)
-            $0.centerX.equalToSuperview()
-            $0.leading.equalToSuperview().offset(40)
-            $0.height.equalTo(362)
+        menuListView.snp.makeConstraints { make in
+            make.top.equalTo(datePickerView.snp.bottom).offset(49)
+            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(40)
+            make.height.equalTo(362)
         }
         
-        menuTypeSegmentedControl.snp.makeConstraints {
-            $0.top.equalTo(menuListView.snp.bottom).offset(40)
-            $0.leading.equalToSuperview().offset(40)
-            $0.height.equalTo(40)
-            $0.centerX.equalToSuperview()
+        menuTypeSegmentedControl.snp.makeConstraints { make in
+            make.top.equalTo(menuListView.snp.bottom).offset(40)
+            make.leading.equalToSuperview().offset(40)
+            make.height.equalTo(40)
+            make.centerX.equalToSuperview()
         }
     }
 }
